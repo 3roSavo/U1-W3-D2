@@ -125,7 +125,8 @@
       */
 
     const changeUrls = function () {
-      const selector = document.querySelector("a:nth-of-type(1)")
+      const selector = document.querySelector(
+        "a:nth-of-type(1)") // oppure getElementsByTag("a")[0] // oppure querySelector("div a")
       selector.setAttribute("href", "https://www.google.com")
 
     }
@@ -176,84 +177,83 @@
     const paintItGreen = function () {
       const selector = document.getElementsByTagName("ul")
       const ulArr = Array.from(selector)
-      ulArr.forEach( (n) => {
+      ulArr.forEach((n) => {
         n.style.backgroundColor = "green"
       })
     }
-paintItGreen()
+    paintItGreen()
 
 
     /* ESERCIZIO 9
        Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
       */
-
     const makeItClickable = function () {
-      const selector = document.getElementsByTagName("h1")
-      const arr = Array.from(selector)
-      selector.setAttribute(onclick, makeItClickable())
-      arr.splice(0,)
-// ??????????????????????????????????????????????????????????????????
-      }
-    
-    
+      const selector = document.getElementsByTagName("h1")[0]
+      selector.innerText = selector.innerText.slice(0, selector.innerText.length - 1)
+    }
+
+
+    document.getElementsByTagName("h1")[0].setAttribute("onclick", "makeItClickable()")
 
     /* ESERCIZIO 10
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
       */
 
     const revealFooterLink = function () {
-      const selector = document.getElementsByTagName("footer")
-
-      selector.setAttribute(onclick,alert("https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents"))
-      
-    }
-   
-
-    /* ESERCIZIO 11
-       Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
-       La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
-    */
-
-    const generateTable = function () {
-
-
+    const selector = document.getElementsByTagName("footer")
     }
 
-    /* ESERCIZIO 12
-       Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
-    */
+    document.getElementsByTagName("footer")[0].setAttribute("onclick", "alert('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents')")
 
-    const addRow = function () {
+          /* ESERCIZIO 11
+             Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
+             La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
+          */
 
+          // const generateTable = function () {
+          //   const selector = document.getElementById("tableArea")
+          //   selector.createElement("table")
+          //   selector.createElement("li")
+          //   selector.createElement("li")
+          //   selector.createElement("li")
+          //   selector.createElement("li")
+          //   selector.createElement("li")
+          // }
 
-    }
+          /* ESERCIZIO 12
+             Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
+          */
 
-    /* ESERCIZIO 14
-      Crea una funzione che nasconda le immagini della tabella quando eseguita
-    */
-
-    const hideAllImages = function () {
-
-
-    }
-
-    /* EXTRA ESERCIZIO 15
-      Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
-    */
-
-    const changeColorWithRandom = function () {
-
-
-    }
-
-    /* EXTRA ESERCIZIO 16
-      Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
-    */
-
-    const deleteVowels = function () {
+          const addRow = function () {
 
 
-    }
+          }
+
+          /* ESERCIZIO 14
+            Crea una funzione che nasconda le immagini della tabella quando eseguita
+          */
+
+          const hideAllImages = function () {
+            const ttt = document.getElementsByTagName("img")
+            ttt.foreach( (n) => {
+              n.style.display = "none"
+            })
+
+          }
+
+          /* EXTRA ESERCIZIO 15
+            Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
+          */
+
+
+          const changeColorWithRandom = function () {
+
+
+          }
+
+          /* EXTRA ESERCIZIO 16
+            Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
+          */
   </script>
 </body>
 
