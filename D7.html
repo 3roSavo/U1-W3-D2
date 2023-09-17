@@ -200,60 +200,82 @@
       */
 
     const revealFooterLink = function () {
-    const selector = document.getElementsByTagName("footer")
+      const selector = document.getElementsByTagName("footer")
     }
 
-    document.getElementsByTagName("footer")[0].setAttribute("onclick", "alert('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents')")
+    document.getElementsByTagName("footer")[0].setAttribute("onclick",
+      "alert('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents')"
+      )
 
-          /* ESERCIZIO 11
-             Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
-             La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
-          */
+    /* ESERCIZIO 11
+       Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
+       La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
+    */
 
-          // const generateTable = function () {
-          //   const selector = document.getElementById("tableArea")
-          //   selector.createElement("table")
-          //   selector.createElement("li")
-          //   selector.createElement("li")
-          //   selector.createElement("li")
-          //   selector.createElement("li")
-          //   selector.createElement("li")
-          // }
+    // const generateTable = function () {
+    //   const selector = document.getElementById("tableArea")
+    //   selector.createElement("table")
+    //   selector.createElement("li")
+    //   selector.createElement("li")
+    //   selector.createElement("li")
+    //   selector.createElement("li")
+    //   selector.createElement("li")
+    // }
 
-          /* ESERCIZIO 12
-             Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
-          */
+    /* ESERCIZIO 12
+       Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
+    */
 
-          const addRow = function () {
-
-
-          }
-
-          /* ESERCIZIO 14
-            Crea una funzione che nasconda le immagini della tabella quando eseguita
-          */
-
-          const hideAllImages = function () {
-            const ttt = document.getElementsByTagName("img")
-            ttt.foreach( (n) => {
-              n.style.display = "none"
-            })
-
-          }
-
-          /* EXTRA ESERCIZIO 15
-            Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
-          */
+    const addRow = function () {
 
 
-          const changeColorWithRandom = function () {
+    }
+
+    /* ESERCIZIO 14
+      Crea una funzione che nasconda le immagini della tabella quando eseguita
+    */
+
+    const hideAllImages = function () {
+      const ttt = document.getElementsByTagName("img")
+      ttt.foreach((n) => {
+        n.style.display = "none"
+      })
+
+    }
+
+    /* EXTRA ESERCIZIO 15
+      Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
+    */
+
+// nella solutions usano selectH2.onclick = () => {........}
+
+    const changeColorWithRandom = function () {
+
+      const selectH2 = document.getElementById("changeMyColor")
+
+      selectH2.addEventListener("click", () => {
+        const randomColor1 = Math.round(Math.random() * 255)
+        const randomColor2 = Math.round(Math.random() * 255)
+        const randomColor3 = Math.round(Math.random() * 255)
+        const color = `rgb(${randomColor1},${randomColor2},${randomColor3})`
+        selectH2.style.color = color
+        selectH2.style.cursor = "pointer"
+        selectH2.style.userSelect = "none"
+      })
+    }
+    changeColorWithRandom()
+
+    /* EXTRA ESERCIZIO 16
+      Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
+    */
+
+const noVocals = () => {
+  const allElement = document.querySelectorAll("h1,h2,h3,div,a,li,p")
+  allElement
+  allElement.every()
+}
 
 
-          }
-
-          /* EXTRA ESERCIZIO 16
-            Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
-          */
   </script>
 </body>
 
